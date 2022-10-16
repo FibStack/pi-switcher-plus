@@ -27,10 +27,8 @@ export class BoardComponent implements OnInit {
               for (let i = 0; i < this.board.devices.length; i++) {
                 let value = res.devices[i].value;
                 let device = this.board.devices[i];
-                if (device instanceof RelayDevice) {
-                  (<RelayDevice>device).value = value;
-                } else if (device instanceof AdcDevice) {
-                  (<AdcDevice>device).value = value;
+                if (device instanceof RelayDevice || device instanceof AdcDevice) {
+                  device.value = value;
                 }
               }
             }
