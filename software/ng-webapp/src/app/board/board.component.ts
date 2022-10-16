@@ -22,21 +22,27 @@ export class BoardComponent implements OnInit {
     interval(1000).subscribe(x => {
       if (this.board.address > 0 && this.board.devices.length > 0) {
         this.appService.getBoard(this.board.index).subscribe(
-          res => {
-            if (res && res.devices && res.devices.length == this.board.devices.length) {
-              for (let i = 0; i < this.board.devices.length; i++) {
-                let value = res.devices[i].value;
-                let device = this.board.devices[i];
-                if (device instanceof RelayDevice || device instanceof AdcDevice) {
-                  device.value = value;
-                }
-              }
-            }
-          },
+          res => this.updateBoard(res),
           err => this.alertService.push("Error while updating board information.", "danger")
         );
       }
     });
+  }
+
+  /**
+   * Updates the current board with the new information
+   * @param board 
+   */
+  updateBoard(board: any) {
+    if (board && board.devices && board.devices.length == this.board.devices.length) {
+      for (let i = 0; i < this.board.devices.length; i++) {
+        let value = board.devices[i].value;
+        let device = this.board.devices[i];
+        if (device instanceof RelayDevice || device instanceof AdcDevice) {
+          device.value = value;
+        }
+      }
+    }
   }
 
   getAdcDevices(): AdcDevice[] {
