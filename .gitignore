@@ -88,3 +88,6 @@ fp-info-cache
 
 # Sonar scanner
 .scannerwork/
+
+# Project related
+piswitcher_plus_board-backups/

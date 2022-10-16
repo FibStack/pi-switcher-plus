@@ -5,8 +5,7 @@ import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-board',
-  templateUrl: './board.component.html',
-  styleUrls: ['./board.component.css']
+  templateUrl: './board.component.html'
 })
 export class BoardComponent implements OnInit {
 
@@ -103,7 +102,7 @@ export class BoardComponent implements OnInit {
 
 export class Board {
   devices: Device[] = [];
-  constructor(public index: number, public address: number, public description: String) {
+  constructor(public index: number, public address: number, public description: string) {
 
   }
 }
