@@ -1,8 +1,9 @@
 /*
-* util.c
-*
-* Created: 3/9/2021 7:49:14 PM
-*  Author: alexandru.botnaru
+* Copyright (c) 2021, FibStack
+* All rights reserved.
+* 
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree. 
 */
 #include <xc.h>
 #include <stdlib.h>

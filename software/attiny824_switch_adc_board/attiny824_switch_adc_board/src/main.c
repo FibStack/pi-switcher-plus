@@ -1,11 +1,9 @@
 /*
-* main.c
-* Copyright (C) 2021, Fibstack LLC. All rights reserved.
-* Unauthorized copying of this file, via any medium is strictly prohibited.
-* Proprietary and confidential.
-*
-* Created: 3/6/2021 5:35:54 PM
-* Author: alexandru.botnaru
+* Copyright (c) 2021, FibStack
+* All rights reserved.
+* 
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree. 
 */
 
 #include <xc.h>

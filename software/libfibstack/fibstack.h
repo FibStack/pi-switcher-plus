@@ -1,10 +1,10 @@
-/**
- * fibstacklib.h
- * Copyright (C) 2021, Fibstack LLC. All rights reserved.
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * 
- * https://www.fibstack.com/eula
- */
+/*
+* Copyright (c) 2021, FibStack
+* All rights reserved.
+* 
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree. 
+*/
 #ifndef __FIBSTACK_LIBRARY__
 #define __FIBSTACK_LIBRARY__
 

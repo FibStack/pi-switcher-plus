@@ -1,11 +1,10 @@
 /*
- * i2clib.h
- * Copyright (C) 2021, Fibstack LLC. All rights reserved.
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- *
- * Created: 3/6/2021
- *  Author: alexandru.botnaru
- */
+* Copyright (c) 2021, FibStack
+* All rights reserved.
+* 
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree. 
+*/
 
 #define I2C_ADDRESS_MIN 0x03
 #define I2C_ADDRESS_MAX 0x77

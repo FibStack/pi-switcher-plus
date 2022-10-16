@@ -1,8 +1,9 @@
 /*
-* adc.c
-*
-* Created: 3/10/2021 7:55:46 PM
-*  Author: alexandru.botnaru
+* Copyright (c) 2021, FibStack
+* All rights reserved.
+* 
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree. 
 */
 
 #include <xc.h>
@@ -36,7 +37,8 @@ void ADC0_init()
 	PORTA.PIN6CTRL &= ~PORT_PULLUPEN_bm; // ADC channel 3
 	PORTA.PIN7CTRL &= ~PORT_PULLUPEN_bm; // ADC channel 4
 	
-	ADC0.COMMAND = ADC_MODE_SINGLE_12BIT_gc;
+	ADC0.COMMAND = ADC_MODE_SINGLE_12BIT_gc;
+
 
 	ADC0.CTRLC = ADC_PRESC_DIV4_gc		// CKL_PER divided by 4
 	| ADC_REFSEL_VDD_gc; // VDD reference
