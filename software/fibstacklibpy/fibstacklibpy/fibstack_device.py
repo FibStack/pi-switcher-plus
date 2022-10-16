@@ -60,6 +60,6 @@ class FibstackDevice:
         else:
             self.value_type = 'UNKNOWN'
 
-    def to_JSON(self):
+    def to_json(self):
         """Returns the JSON representation of the FibstackDevice object."""
         return { "id": self.id, "description": self.description, "is_read_only": self.is_read_only, "value_type": self.value_type, "value": self.value }

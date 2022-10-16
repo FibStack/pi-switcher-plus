@@ -19,10 +19,10 @@ setup(
     description="Library to interact with Fibstack boards.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="http://fibstack.com",
-    author="alexandru.botnaru",
+    url="https://fibstack.com",
+    author="fibstack",
     author_email="contact@fibstack.com",
-    license="Comercial",
+    license="MIT",
     classifiers=[
         "Intended Audience :: Developers",
         "License :: Other/Proprietary License",

@@ -120,9 +120,9 @@ class FibstackBoard:
             devices.append(self.get_device(device_id))
         return devices
 
-    def to_JSON(self):
+    def to_json(self):
         """Returns the JSON representation of the FibstackBoard object."""
         all_devices = []
         for device in self.get_devices():
-            all_devices.append(device.to_JSON())
+            all_devices.append(device.to_json())
         return { "address": self.address, "total_devices": self.total_devices, "description": self.description, "devices": all_devices }
