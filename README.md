@@ -4,9 +4,9 @@
 
 ## Overview
 
-**FibStack PiSwitcher Plus** board was designed to help you in your next automation project. 
+The **FibStack PiSwitcher Plus** board was designed to help you in your next automation project. 
 
-The board has four high-quality relays allowing to switch high voltage and currents. Controlling a steam iron or an oven is not the right task for the board, but it will handle most home appliances below 1200W. Each relay has an LED indicator showing when the NO (Normal Open) contact is connected to the COM (Common).
+The board has four high-quality relays allowing it to switch high voltage and currents. Controlling a steam iron or an oven is not the right task for the board, but it will handle most home appliances below 1200W. Each relay has an LED indicator showing when the NO (Normal Open) contact is connected to the COM (Common).
 
 Additionally, the board has four 12-bit ADC channels that can convert electric signals up to 5 volts. The converted value allows more flexibility in the automation decision logic.
 
@@ -50,9 +50,9 @@ The FibStack Dashboard is a convenient web-based UI tool that allows you to cont
 - **[Microchip Studio 7.0](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio)**: The IDE for writing and building source code for the ATTiny chip. We also use this tool to flash the chips.
 - **[ATMEL-ICE](https://www.microchip.com/en-us/development-tool/ATATMEL-ICE)**: Hardware tool for flashing program and EEPROM memories.
 - **[Python CFFI](https://cffi.readthedocs.io/en/latest)**: The Python wrapper library to build the `fibstacklib_cffi` project.
-- **[Angular CLI 11.1.1](https://angular.io/cli)** To develop and build Angular project.
+- **[Angular CLI 11.1.1](https://angular.io/cli)** To develop and build Angular projects.
 - **Python 3.7 and up**
-- Raspberry Pi OS **GCC** complier
+- Raspberry Pi OS **GCC** compiler
 
 ## BOM
 
@@ -93,8 +93,8 @@ You can write your software to control the board using the commands below.
 | 1 | `version` | Returns a constant string from the board that represents the Firmware/Hardware version. |
 | 2 | `setaddr:<new_address_value>` | Set the PiSwitcher Plus board I2C address. The valid address value should be an integer between 3 and 119. |
 | 3 | `status` | Returns a set of values delimited by a colon `:`. Each value represents a device value. The first four values represent the Relay values, `1 `means the relay's coil is energized, `0` otherwise. The last four values represent the values from ADC channels. Example: `0:1:1:0:120:1023:0:785`. |
-| 4 | `get:<device_id>` | Returns the value (status) for the specified device. The relay devices IDs are from 0 to 3 inclusive. The ADC channel devices IDs are from 4 to 7 inclusive. |
-| 5 | `set:<device_id>:<value>` | Sets the value for the specified device. This command is used to switch relay devices on the PiSwitcher Plus board. The `set` command doesn't work for ADC devices as they are Read-Only. The valid value for the `device_id` are from 0 to 3 inclusive. The possible `value` values are 0 and 1. |
+| 4 | `get:<device_id>` | Returns the value (status) for the specified device. The relay devices IDs are from 0 to 3 inclusive. The ADC channel device IDs are from 4 to 7 inclusive. |
+| 5 | `set:<device_id>:<value>` | Sets the value for the specified device. This command is used to switch relay devices on the PiSwitcher Plus board. The `set` command doesn't work for ADC devices as they are Read-Only. The valid values for the `device_id` are from 0 to 3 inclusive. The possible values are 0 and 1. |
 
 ## License Information
 This product is open source!
