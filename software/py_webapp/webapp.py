@@ -23,7 +23,7 @@ def home():
 @app.route('/boards', methods=['GET'])
 def get_boards():
     """
-    Returns the information about all Fibstack boards connected in a JSON format
+    Returns the information about all FibStack boards connected in a JSON format
     """
     context.update()
     total_boards = context.get_total_boards()
@@ -84,7 +84,7 @@ def set_value():
 @app.route('/set-address', methods=['POST'])
 def set_address():
     """
-    Sets the Fibstack Board I2C address.
+    Sets the FibStack Board I2C address.
     If any of the parameters is invalid, it will return HTTP Error 400 - Bad request.
     If the address was set successfuly, then it will return the board object with the updated address
     

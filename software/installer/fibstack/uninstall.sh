@@ -5,7 +5,7 @@ if [ `id -u` -ne 0 ]; then
     exit 1
 fi
 
-echo "Uninstalling the Fibstack package..."
+echo "Uninstalling the FibStack package..."
 
 
 # Stop and disable the service
@@ -25,7 +25,7 @@ PYTHON_LIB_DIR=/usr/lib/python3/dist-packages/fibstacklibpy
 PYTHON_CFFI_LIB_FILE=/usr/lib/python3/dist-packages/fibstacklib_*.so
 [ -f $PYTHON_CFFI_LIB_FILE ] && rm $PYTHON_CFFI_LIB_FILE
 
-# Remove Fibstack CLI utility
+# Remove FibStack CLI utility
 FIBSTACK_CLI_FILE=/usr/bin/fibstack
 [ -f $FIBSTACK_CLI_FILE ] && rm $FIBSTACK_CLI_FILE
 
@@ -39,4 +39,4 @@ FIBSTACK_C_LIB=/usr/lib/fibstacklib.so
 FIBSTACK_DIR=/usr/share/fibstack
 [ -d $FIBSTACK_DIR ] && rm -r $FIBSTACK_DIR
 
-echo "Fibstack package was uninstalled."
+echo "FibStack package was uninstalled."

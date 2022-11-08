@@ -26,7 +26,7 @@ struct fibstack_board_description
 };
 
 static struct fibstack_board_description BOARD_DESCRIPTIONS[] = {
-    {0, "FBSWP01", 8, FBSWP01_devices_descriptor_indexes, "Fibstack Switcher Plus. Four relay switches and four 12-bit ADC converters."}
+    {0, "FBSWP01", 8, FBSWP01_devices_descriptor_indexes, "FibStack PiSwitcher Plus. Four relay switches and four 12-bit ADC converters."}
     };
 
 struct fibstack_device_description
@@ -101,7 +101,7 @@ int fibstack_context_update(struct fibstack_context *context)
     for (scan_address = I2C_ADDRESS_MIN; scan_address <= I2C_ADDRESS_MAX; scan_address++)
     {
         char *result = send_get_data(scan_address, "version", false);
-        // Here check all supported Fibstack boards.
+        // Here check all supported FibStack boards.
         if (starts_with(result, "FBSWP01"))
         {
             addresses[devices_found] = scan_address;
@@ -174,7 +174,7 @@ int fibstack_board_update(struct fibstack_board *board)
         {
             board->hardware_version = 0;
             struct fibstack_board_description board_descriptor = BOARD_DESCRIPTIONS[board->hardware_version];
-            // Fibstack Switcher Plus board with ADC - has 8 devices.
+            // FibStack PiSwitcher Plus board with ADC - has 8 devices.
             if (!board->devices)
             {
                 board->device_number = board_descriptor.devices;

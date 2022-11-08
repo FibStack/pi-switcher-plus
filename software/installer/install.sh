@@ -61,7 +61,7 @@ install_current_version()
     chmod 755 /usr/lib/libfibstack.so
     ldconfig
     
-    # Copy Fibstack CLI utility
+    # Copy FibStack CLI utility
     cp fibstackcli/fibstack /usr/bin/
     chmod 511 /usr/bin/fibstack
     
@@ -80,7 +80,7 @@ install_current_version()
     systemctl enable fibstack.service
     systemctl start fibstack.service
     
-    echo "Fibstack package installation complete."
+    echo "FibStack package installation complete."
 }
 
 uninstall_old_version()
@@ -116,7 +116,7 @@ elif [ $CURRENT_BUILD -lt $INSTALLER_BUILD ]; then
         
         # Ask the user if he wants to uninstall the old version and install the new one.
         while true; do
-            read -p "An older version of Fibstack package is installed. Do you want to uninstall it? [Y/n]" USER_ANSWER
+            read -p "An older version of FibStack package is installed. Do you want to uninstall it? [Y/n]" USER_ANSWER
             case ${USER_ANSWER:-Y} in
                 [Yy]* ) 
                         uninstall_old_version

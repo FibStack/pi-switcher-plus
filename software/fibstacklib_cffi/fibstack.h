@@ -39,13 +39,13 @@ extern struct fibstack_context *fibstack_context_new();
 extern void fibstack_context_free(struct fibstack_context *context);
 
 /**
- * Returns the total number of Fibstack boards connected to the current computer board. 
+ * Returns the total number of FibStack boards connected to the current computer board. 
  * The function returns a negative value if the pointer to the context structure is invalid.
  */
 extern int fibstack_context_get_board_number(struct fibstack_context *context);
 
 /**
- * Query the I2C port for Fibstack boards and populates the context structure with the data.
+ * Query the I2C port for FibStack boards and populates the context structure with the data.
  */
 int fibstack_context_update(struct fibstack_context *context);
 
@@ -57,7 +57,7 @@ extern struct fibstack_board *fibstack_context_get_board_by_index(struct fibstac
 
 /**
  * The function returns a pointer to the board specified by the board_address parameter. 
- * If the context or board_address is invalid, or no Fibstack board found on the specified I2C address, the function will return NULL.
+ * If the context or board_address is invalid, or no FibStack board found on the specified I2C address, the function will return NULL.
  */
 extern struct fibstack_board *fibstack_context_get_board_by_address(struct fibstack_context *context, int board_address);
 

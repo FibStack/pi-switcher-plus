@@ -4,14 +4,14 @@ from fibstacklibpy import FibstackDevice
 
 class FibstackBoard:
     """
-    This class represents a Fibstack Board connected to this board computer.
+    This class represents a FibStack Board connected to this board computer.
 
     Attributes
     ----------
     address:
-        The I2C address of the Fibstack Board
+        The I2C address of the FibStack Board
     description:
-        A short description of the Fibstack Board
+        A short description of the FibStack Board
     total_devices:
         The number of total Devices this Board has
     """
@@ -31,7 +31,7 @@ class FibstackBoard:
         self.update()
 
     def update(self):
-        """Updates the information from the Fibstack Board."""
+        """Updates the information from the FibStack Board."""
         fib.fibstack_board_update(self.__board)
         description = fib.fibstack_board_get_description(self.__board)
 
@@ -41,7 +41,7 @@ class FibstackBoard:
 
     def set_address(self, new_address):
         """
-        Sets the Fibstack Board I2C address.
+        Sets the FibStack Board I2C address.
         
         
         Parameters
@@ -113,7 +113,7 @@ class FibstackBoard:
         return device
 
     def get_devices(self):
-        """Returns a list of devices that the current Fibstack Board has."""
+        """Returns a list of devices that the current FibStack Board has."""
         devices = []
         total_devices = fib.fibstack_board_get_device_number(self.__board)
         for device_id in range(total_devices):

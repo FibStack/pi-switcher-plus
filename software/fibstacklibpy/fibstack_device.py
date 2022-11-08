@@ -3,12 +3,12 @@ from fibstacklib_cffi import lib as fib
 
 class FibstackDevice:
     """
-    A class used to represent a Device on a Fibstack board.
+    A class used to represent a Device on a FibStack board.
     
     Attributes
     ----------
     id: 
-        The device ID on a Fibstack board
+        The device ID on a FibStack board
     description:
         The description of the Device
     is_read_only:

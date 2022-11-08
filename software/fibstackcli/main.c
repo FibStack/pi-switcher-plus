@@ -15,7 +15,7 @@
 
 #define CURRENT_VERSION "0.9.1"
 
-static char doc[] = "Command line utility to interact with Fibstack boards.";
+static char doc[] = "Command line utility to interact with FibStack boards.";
 static char args_doc[] = "{--list-boards | -l} {--board=BOARD_INDEX | -b BOARD_INDEX |--address=ADDRESS | -a ADDRESS [--device=DEVICE_ID | -d DEVICE_ID [--set=NEW_VALUE | -s NEW_VALUE]] [--set=NEW_VALUE | -s NEW_VALUE]}";
 
 static struct argp_option options[] = {
@@ -24,7 +24,7 @@ static struct argp_option options[] = {
     {"address", 'a', "ADDRESS", 0, "Specifies the board address. If only this parameter is specified, then it will show the status of the board."},
     {"device", 'd', "DEVICE_ID", 0, "Specifies the device ID. If the set option is not specified, this will show the status of the device."},
     {"set", 's', "NEW_VALUE", 0, "Specify the new value to be assigned to the device."},
-    {"version", 'v', 0, 0, "Shows the current version of the Fibstack CLI tool."},
+    {"version", 'v', 0, 0, "Shows the current version of the FibStack CLI tool."},
     {0}
     };
 

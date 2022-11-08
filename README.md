@@ -74,6 +74,11 @@ The FibStack Dashboard is a convenient web-based UI tool that allows you to cont
 | 14 | J4 | Screw Terminal Block 1x12, Pitch 3.5mm. Alternatively, you can use two of 1x6, three of 1x4, or four of 1x3. | 1x12 - P3.5mm | 1|
 
 
+For the Extended GPIO Male Female header connector (J1), we recommend using a component as shown in the figure below. The female part has a height of 8.5mm plus two plastic pieces of 2.5mm. The female part is placed on the bottom of the board and soldered on the top of the board. The male pins should be 9.8mm or longer to allow an additional expansion board to be connected.
+
+![Extended GPIO Header Connector](images/gpio_header.png?raw=true "Extended GPIO Header Connector")
+
+
 ## Documentation
  - **[Project Home Page](https://fibstack.com/piswitcher/)**
  - **[Getting Started Guide](https://fibstack.com/piswitcher/get_started/)**

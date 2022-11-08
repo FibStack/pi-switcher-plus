@@ -1,5 +1,5 @@
 [Unit]
-Description=Fibstack Service
+Description=FibStack Service
 After=multi-user.target network.target
 
 [Service]

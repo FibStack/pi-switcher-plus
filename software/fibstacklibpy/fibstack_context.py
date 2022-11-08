@@ -6,7 +6,7 @@ class FibstackContext:
     """
     This class keeps track of all Fibstack boards connected.
 
-    Each Fibstack board has an associated FibstackBoard object.
+    Each FibStack board has an associated FibstackBoard object.
     The FibstackContext object stores these objects into an internal map.
     
     """
