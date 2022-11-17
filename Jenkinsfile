@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        nodejs '16.18.0'
+    }
 
     stages {
         stage('setup') {
@@ -10,8 +13,8 @@ pipeline {
                 sh 'ls'
                 sh 'ls -la software/installer'
                 sh 'ls -la software/installer/fibstack'
-                sh 'node -v'
-                sh 'npm -v'
+                sh 'npm version'
+                sh 'ng version'
             }
         }
     }
