@@ -5,7 +5,7 @@ pipeline {
     }
 
     stages {
-        stage('setup') {
+        stage('Setup') {
             steps {
                 echo 'Step1. Make script files executable.'
                 sh 'chmod +x software/installer/install.sh'
@@ -16,6 +16,17 @@ pipeline {
                 sh 'npm version'
                 sh 'ng version'
             }
+        }
+
+        stage('Front-end Build') {
+            dir('software/ng-webapp') {
+                sh 'npm install'
+                sh 'ng build --prod --build-optimizer --baseHref="/static/"'
+            }
+        }
+
+        stage('Prepare Installation Files') {
+            sh 'ls -la software/ng-webapp/dist/'
         }
     }
 }
