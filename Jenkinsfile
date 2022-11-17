@@ -10,6 +10,8 @@ pipeline {
                 sh 'ls'
                 sh 'ls -la software/installer'
                 sh 'ls -la software/installer/fibstack'
+                sh 'node -v'
+                sh 'npm -v'
             }
         }
     }
