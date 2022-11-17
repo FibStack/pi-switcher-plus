@@ -34,8 +34,8 @@ pipeline {
                 echo '3a. Copy backend web app.'
                 sh 'cp software/py_webapp/webapp.py software/installer/fibstack/webapp.py'
                 echo '3b. Copy C library and CLI source files'
-                sh 'cp -a software/libfibstack/. software/installer/'
-                sh 'cp -a software/fibstackcli/. software/installer/'
+                sh 'cp -a software/libfibstack/. software/installer/libfibstack/'
+                sh 'cp -a software/fibstackcli/. software/installer/fibstackcli/'
 
                 sh 'ls -la software/ng-webapp/dist/'
                 sh 'ls -la software/ng-webapp/dist/ng-webapp/'
