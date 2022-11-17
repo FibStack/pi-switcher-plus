@@ -19,14 +19,18 @@ pipeline {
         }
 
         stage('Front-end Build') {
-            dir('software/ng-webapp') {
-                sh 'npm install'
-                sh 'ng build --prod --build-optimizer --baseHref="/static/"'
+            steps {
+                dir('software/ng-webapp') {
+                    sh 'npm install'
+                    sh 'ng build --prod --build-optimizer --baseHref="/static/"'
+                }
             }
         }
 
         stage('Prepare Installation Files') {
-            sh 'ls -la software/ng-webapp/dist/'
+            steps {
+                sh 'ls -la software/ng-webapp/dist/'
+            }
         }
     }
 }
