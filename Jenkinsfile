@@ -17,6 +17,8 @@ pipeline {
                 sh 'chmod +x software/installer/install.sh'
                 sh 'chmod +x software/installer/fibstack/uninstall.sh'
 
+                sh 'curl https://github.com/megastep/makeself/releases/download/release-2.4.5/makeself-2.4.5.run --output makeself-2.4.5.run'
+
                 script {
                     // Download the makeself utility
                     def response = httpRequest 'https://github.com/megastep/makeself/archive/refs/tags/release-2.4.5.tar.gz'
