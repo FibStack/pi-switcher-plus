@@ -59,7 +59,7 @@ pipeline {
                 tar file: 'fibstack-package.tar.gz', dir: 'software/installer'
 
                 echo '5. Build .run installer.'
-                echo 'TODO...'
+                sh 'makeself-2.4.5/makeself.sh software/installer/ fibstack_package.run "Fibstack Package" ./install.sh'
             }
         }
 
