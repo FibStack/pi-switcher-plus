@@ -17,7 +17,7 @@ pipeline {
                 sh 'chmod +x software/installer/install.sh'
                 sh 'chmod +x software/installer/fibstack/uninstall.sh'
 
-                sh 'curl https://github.com/megastep/makeself/releases/download/release-2.4.5/makeself-2.4.5.run --output makeself-2.4.5.run'
+                sh 'curl -LJO https://github.com/megastep/makeself/releases/download/release-2.4.5/makeself-2.4.5.run --output makeself-2.4.5.run'
                 sh 'chmod +x makeself-2.4.5.run'
                 sh './makeself-2.4.5.run'
                 sh 'ls -la'
