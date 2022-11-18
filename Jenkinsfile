@@ -20,7 +20,6 @@ pipeline {
                 sh 'curl -LJO https://github.com/megastep/makeself/releases/download/release-2.4.5/makeself-2.4.5.run --output makeself-2.4.5.run'
                 sh 'chmod +x makeself-2.4.5.run'
                 sh './makeself-2.4.5.run'
-                sh 'ls -la'
             }
         }
 
@@ -60,16 +59,6 @@ pipeline {
 
                 echo '5. Build .run installer.'
                 sh 'makeself-2.4.5/makeself.sh software/installer/ fibstack_package.run "Fibstack Package" ./install.sh'
-            }
-        }
-
-        stage('Finalize') {
-            steps {
-                sh 'ls -la software/installer'
-                sh 'ls -la software/installer/fibstack'
-                sh 'ls -la software/ng-webapp/dist/'
-                sh 'ls -la software/ng-webapp/dist/ng-webapp/'
-                sh 'ls -la software/installer/fibstack/static/'
             }
         }
     }
