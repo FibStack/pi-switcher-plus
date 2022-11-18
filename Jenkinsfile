@@ -50,6 +50,10 @@ pipeline {
 
         stage('Build the installers') {
             steps {
+                echo '4. Build tar.gz archive.'
+                tar file: 'fibstack-package.tar.gz', dir: 'software/installer'
+
+                echo '5. Build .run installer.'
                 echo 'TODO...'
             }
         }
