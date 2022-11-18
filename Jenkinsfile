@@ -20,7 +20,7 @@ pipeline {
                 script {
                     // Download the makeself utility
                     def response = httpRequest 'https://github.com/megastep/makeself/archive/refs/tags/release-2.4.5.tar.gz'
-                    writeFile file: 'makeself-2.4.5.tar.gz', text: response.content
+                    writeFile file: 'makeself-2.4.5.tar.gz', text: response.content, encoding: 'Base64'
                 }
                 untar file: 'makeself-2.4.5.tar.gz'
                 sh 'ls -la'
