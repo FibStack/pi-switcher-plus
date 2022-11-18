@@ -18,7 +18,8 @@ pipeline {
                 sh 'chmod +x software/installer/fibstack/uninstall.sh'
 
                 // Download the makeself utility
-                sh 'wget https://github.com/megastep/makeself/releases/download/release-2.4.5/makeself-2.4.5.run'
+                def response = httpRequest 'https://github.com/megastep/makeself/releases/download/release-2.4.5/makeself-2.4.5.run'
+                writeFile file: 'makeself-2.4.5.run', text: response.content
                 sh 'chmod +x *.run'
                 sh 'ls -la'
             }
