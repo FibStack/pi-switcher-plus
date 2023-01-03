@@ -80,12 +80,12 @@ For the Extended GPIO Male Female header connector (J1), we recommend using a co
 
 
 ## Documentation
- - **[Project Home Page](https://fibstack.com/piswitcher/)**
- - **[Getting Started Guide](https://fibstack.com/piswitcher/get_started/)**
- - **[CLI Interface Tool](https://fibstack.com/utilities/cli/)**
- - **[FibStack Dashboard](https://fibstack.com/utilities/dashboard/)**
- - **[C API Reference](https://fibstack.com/piswitcher/c_api_ref/)**
- - **[Python API Reference](https://fibstack.com/piswitcher/py_api_ref/)**
+ - **[Project Home Page](https://fibstack.com/projects/piswitcher/)**
+ - **[Getting Started Guide](https://fibstack.com/projects/piswitcher/get_started/)**
+ - **[CLI Interface Tool](https://fibstack.com/projects/piswitcher/cli/)**
+ - **[FibStack Dashboard](https://fibstack.com/projects/piswitcher/dashboard/)**
+ - **[C API Reference](https://fibstack.com/projects/piswitcher/c_api_ref/)**
+ - **[Python API Reference](https://fibstack.com/projects/piswitcher/py_api_ref/)**
 
 ## I2C Protocol
 
