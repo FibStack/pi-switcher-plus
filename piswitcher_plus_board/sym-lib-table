@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "fibstack_piswitcher_plus_lib")(type "KiCad")(uri "${KIPRJMOD}/fibstack_piswitcher_plus_lib.kicad_sym")(options "")(descr ""))
+)

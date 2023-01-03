@@ -1,0 +1,8 @@
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+.padded-bottom {
+  padding-bottom: 75px;
+}

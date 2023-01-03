@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100%"
+   height="100%"
+   viewBox="0 0 230 50"
+   version="1.1"
+   id="svg1649"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1646" />
+  <g
+     id="layer1">
+    <g
+       id="g1454"
+       transform="translate(-196.85553,-224.49421)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.430236"
+         id="rect1026-2"
+         width="12.907185"
+         height="12.907163"
+         x="208.36285"
+         y="251.02142"
+         ry="0.99285436" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:47.5282px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.1882"
+         x="230.16043"
+         y="261.79355"
+         id="text1034-6"><tspan
+           id="tspan1032-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.1882"
+           x="230.16043"
+           y="261.79355"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift Bold Condensed';fill:#ffffff;fill-opacity:1;stroke-width:1.1882"
+             id="tspan1028-3">FibStack</tspan><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#ffffff;fill-opacity:1;stroke-width:1.1882"
+             id="tspan1030-2" /></tspan></text>
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.761184"
+         id="rect1037-0"
+         width="22.835793"
+         height="22.835783"
+         x="198.45757"
+         y="226.07971"
+         ry="0.99286395" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.0992859"
+         id="rect1039-5"
+         width="2.9785764"
+         height="2.9785857"
+         x="203.39856"
+         y="251.02142"
+         ry="0.99286866" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.0992859"
+         id="rect1041-5"
+         width="2.9785764"
+         height="2.9785857"
+         x="198.43425"
+         y="251.02142"
+         ry="0.99286866" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264762"
+         id="rect1043-1"
+         width="7.9428668"
+         height="7.9428921"
+         x="198.43427"
+         y="255.98573"
+         ry="0.99286395" />
+    </g>
+  </g>
+</svg>
