@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environment } from '../../environments/environment'
+import * as PackageJson from '../../../package.json'
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment'
 })
 export class HeaderComponent {
 
-  currentVersion = environment.appVersion;
+  packageInfo = PackageJson;
+  currentVersion = this.packageInfo.version;
 
 }
