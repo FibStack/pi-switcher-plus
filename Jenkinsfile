@@ -48,7 +48,7 @@ pipeline {
                 sh 'cp -a software/fibstacklibpy/. software/installer/fibstacklibpy/'
 
                 echo '3d. Copy front-end compiled files'
-                sh 'cp -a software/ng-webapp/dist/ng-webapp/. software/installer/fibstack/static/'
+                sh 'cp -a software/ng-webapp/dist/dashboard-ui/. software/installer/fibstack/static/'
             }
         }
 
