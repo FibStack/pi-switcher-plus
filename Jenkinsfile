@@ -28,7 +28,7 @@ pipeline {
                 dir('software/ng-webapp') {
                     echo 'Step 2. Build the front-end application.'
                     sh 'npm install'
-                    sh 'ng build --configuration production --build-optimizer --baseHref="/static/"'
+                    sh 'ng build --configuration production --build-optimizer --base-href /static/'
                 }
             }
         }
