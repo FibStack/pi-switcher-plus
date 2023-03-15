@@ -1,6 +1,6 @@
 #!/bin/sh
 
-INSTALLER_BUILD=2
+INSTALLER_BUILD=4
 CURRENT_BUILD=0
 BUILD_NUMBER_FILE=/usr/share/fibstack/.build
 
