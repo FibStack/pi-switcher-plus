@@ -3,7 +3,8 @@ import { Alert, AlertService } from '../alert.service';
 
 @Component({
     selector: 'alerts',
-    templateUrl: './alert.component.html'
+    templateUrl: './alert.component.html',
+    standalone: false
 })
 export class AlertComponent {
 
