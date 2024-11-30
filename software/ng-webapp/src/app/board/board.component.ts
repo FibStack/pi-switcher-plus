@@ -4,8 +4,9 @@ import { AlertService } from '../alert.service';
 import { AppService } from '../app.service';
 
 @Component({
-  selector: 'app-board',
-  templateUrl: './board.component.html'
+    selector: 'app-board',
+    templateUrl: './board.component.html',
+    standalone: false
 })
 export class BoardComponent implements OnInit {
 

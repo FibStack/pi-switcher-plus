@@ -4,8 +4,9 @@ import { AppService } from './app.service';
 import { AdcDevice, Board, RelayDevice } from './board/board.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    standalone: false
 })
 export class AppComponent implements OnInit {
 
