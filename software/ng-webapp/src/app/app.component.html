@@ -1,9 +1,9 @@
 <alerts></alerts>
-<div class="row" *ngFor="let board of boards">
-  <div class="col">
-
-    <app-board [board]="board"></app-board>
-
+@for (board of boards; track board) {
+  <div class="row">
+    <div class="col">
+      <app-board [board]="board"></app-board>
+    </div>
   </div>
-</div>
+}
 

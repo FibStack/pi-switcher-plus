@@ -1,44 +1,52 @@
 <div class="bg-body rounded shadow-sm p-3 my-3">
-    <h5 class="border-bottom">Board {{ board.index}} <span class="text-muted">Address: {{ board.address }} (0X{{ board.address.toString(16) }})</span></h5>
+  <h5 class="border-bottom">Board {{ board.index}} <span class="text-muted">Address: {{ board.address }} (0X{{ board.address.toString(16) }})</span></h5>
 
-    <div class="row mt-3">
+  <div class="row mt-3">
 
-        <div class="col-12 col-md-6 mb-3">
-            <h6 class="border-bottom border-2 pb-2">Relay Switches</h6>
-            <div *ngFor="let device of getRelayDevices()" class="border-bottom p-2">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="relaySwitchDevice{{ board.index}}-{{device.id}}"
-                        [checked]="device.value" (change)="relayDeviceToggle(device)">
-                    <label class="form-check-label" for="relaySwitchDevice{{ board.index}}-{{device.id}}">Relay Switch {{
-                        device.id + 1}}</label>
-                </div>
-            </div>
+    <div class="col-12 col-md-6 mb-3">
+      <h6 class="border-bottom border-2 pb-2">Relay Switches</h6>
+      @for (device of getRelayDevices(); track device) {
+        <div class="border-bottom p-2">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="relaySwitchDevice{{ board.index}}-{{device.id}}"
+              [checked]="device.value" (change)="relayDeviceToggle(device)">
+            <label class="form-check-label" for="relaySwitchDevice{{ board.index}}-{{device.id}}">Relay Switch {{
+            device.id + 1}}</label>
+          </div>
         </div>
-
-        <div class="col-12 col-md-6 mb-3">
-            <h6 class="border-bottom border-2 pb-2">ADC Channels</h6>
-            <div class="row">
-                <div *ngFor="let device of getAdcDevices()" class="col-6">
-                    <h6 class="mb-2 text-muted">ADC Channel {{ device.channel }}</h6>
-                    <h5 class="">{{ device.value }}</h5>
-                </div>
-            </div>
-        </div>
-
+      }
     </div>
-    <button type="button" class="btn btn-secondary" (click)="toggleSettings()">Settings</button>
-    <div *ngIf="showSettings" class="mt-3">
-        <h6 class="border-bottom pb-2">Settings</h6>
-        <small class="text-muted">The board address should be in the range of 3 to 170, and it should not be occupied by
-            other device.</small>
-        <div class="input-group mb-3">
-            <span class="input-group-text">Board address: </span>
-            <input type="number" class="form-control" aria-label="Type a valid I2C address"
-                aria-describedby="change-address" [(ngModel)]="newAddress">
-            <span class="input-group-text">HEX: 0X{{ newAddress.toString(16) }}</span>
-            <button class="btn btn-outline-secondary" type="button" id="change-address"
-                (click)="setBoardI2CAddress()">Change</button>
-        </div>
-        <div *ngIf="changeAddressError"> <small class="text-danger"> {{ changeAddressError }} </small></div>
+
+    <div class="col-12 col-md-6 mb-3">
+      <h6 class="border-bottom border-2 pb-2">ADC Channels</h6>
+      <div class="row">
+        @for (device of getAdcDevices(); track device) {
+          <div class="col-6">
+            <h6 class="mb-2 text-muted">ADC Channel {{ device.channel }}</h6>
+            <h5 class="">{{ device.value }}</h5>
+          </div>
+        }
+      </div>
     </div>
+
+  </div>
+  <button type="button" class="btn btn-secondary" (click)="toggleSettings()">Settings</button>
+  @if (showSettings) {
+    <div class="mt-3">
+      <h6 class="border-bottom pb-2">Settings</h6>
+      <small class="text-muted">The board address should be in the range of 3 to 170, and it should not be occupied by
+      other device.</small>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Board address: </span>
+        <input type="number" class="form-control" aria-label="Type a valid I2C address"
+          aria-describedby="change-address" [(ngModel)]="newAddress">
+        <span class="input-group-text">HEX: 0X{{ newAddress.toString(16) }}</span>
+        <button class="btn btn-outline-secondary" type="button" id="change-address"
+        (click)="setBoardI2CAddress()">Change</button>
+      </div>
+      @if (changeAddressError) {
+        <div> <small class="text-danger"> {{ changeAddressError }} </small></div>
+      }
+    </div>
+  }
 </div>
