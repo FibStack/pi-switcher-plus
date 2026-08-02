@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { interval } from 'rxjs';
 import { AlertService } from '../alert.service';
 import { AppService } from '../app.service';
@@ -6,6 +6,7 @@ import { AppService } from '../app.service';
 @Component({
     selector: 'app-board',
     templateUrl: './board.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BoardComponent implements OnInit {

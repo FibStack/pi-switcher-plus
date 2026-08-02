@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { AlertService } from './alert.service';
 import { AppService } from './app.service';
 import { AdcDevice, Board, RelayDevice } from './board/board.component';
@@ -6,6 +6,7 @@ import { AdcDevice, Board, RelayDevice } from './board/board.component';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AppComponent implements OnInit {
