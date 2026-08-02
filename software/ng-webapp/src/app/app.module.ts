@@ -1,4 +1,4 @@
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,5 +19,5 @@ import { HeaderComponent } from './header/header.component';
         HeaderComponent
     ],
     bootstrap: [AppComponent, HeaderComponent, FooterComponent], imports: [BrowserModule,
-        FormsModule], providers: [AppService, AlertService, provideHttpClient(withInterceptorsFromDi())] })
+        FormsModule], providers: [AppService, AlertService, provideHttpClient(withXhr(), withInterceptorsFromDi())] })
 export class AppModule { }
